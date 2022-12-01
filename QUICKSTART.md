@@ -4,18 +4,18 @@ The following document shows how to install and configure the platform driver wi
 
 ## Requirements
 
-There are system level requirements that must be met before installing VOLTTRON.  One can install on Ubuntu using the following commands:
+There are system level requirements that must be met before installing VOLTTRON.  One can install them on Ubuntu 22.04 using the following commands:
 
 ```shell
 sudo apt-get update
-sudo apt-get install build-essential libffi-dev python3-dev python3-venv openssl libssl-dev libevent-dev git
+sudo apt-get install build-essential libffi-dev python3-dev python3-venv openssl libssl-dev libevent-dev
 ```
 
 ## Environment
 
 Depending on how one wants to deploy VOLTTRON an environment must be built/created in order to be able to execute python code.  It is recommended practice for a virtual environment to be created specifically for VOLTTRON.
 
- 1. As a non-root user a folder to contain the configuration files for your deployment.
+ 1. As a non-root user a create folder to contain the configuration files for your deployment.
     ```shell
     > mkdir deployment && cd deployment
     ```
@@ -97,7 +97,7 @@ Depending on how one wants to deploy VOLTTRON an environment must be built/creat
     # Note this is not an agent, but a library that extends from volttron-lib-base-driver.
     # Libraries allow the volttron-platform-driver agent to interact with devices without the volttron-platform-driver
     # knowing anything about the device protocol itself.
-    (env)> pip install volttron-lib-fake-driver
+    (env)> pip install volttron-lib-fake-driver --start
     ```
  1. Install the volttron-platform driver to the VOLTTRON instance.
     ```shell
